@@ -9,3 +9,9 @@ if [[ "$1" == "--logs" ]]; then
         echo -e "Nazwa pliku: $filename\nSkrypt: $0\nData: $(date)" > "$filename"
     done
 fi
+
+if [[ "$1" == "--help" ]]; then
+    echo "--date : wyświetla dzisiejszą datę"
+    echo "--logs [n] : tworzy n plików log"
+    echo "--help : wyświetla pomoc"
+fi
