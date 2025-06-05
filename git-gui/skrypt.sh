@@ -22,3 +22,11 @@ if [[ "$1" == "--init" ]]; then
     git clone https://github.com/dsw43089/Lab4.git .
     export PATH="$PATH:$(pwd)"
 fi
+
+if [[ "$1" == "--error" || "$1" == "-e" ]]; then
+    count=${2:-100}
+    for ((i=1; i<=count; i++)); do
+        mkdir -p "error$i"
+        echo -e "Błąd nr $i\nSkrypt: $0\nData: $(date)" > "error$i/error$i.txt"
+    done
+fi
