@@ -18,3 +18,7 @@ if [[ "$1" == "--help" || "$1" == "-h" ]]; then
     echo "--help, -h : wyświetla tę pomoc"
 fi
 
+if [[ "$1" == "--init" ]]; then
+    git clone https://github.com/dsw43089/Lab4.git .
+    export PATH="$PATH:$(pwd)"
+fi
