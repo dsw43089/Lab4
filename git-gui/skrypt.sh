@@ -13,10 +13,13 @@ if [[ "$1" == "--logs" || "$1" == "-l" ]]; then
 fi
 
 if [[ "$1" == "--help" || "$1" == "-h" ]]; then
-    echo "--date, -d : wyświetla dzisiejszą datę"
-    echo "--logs [n], -l [n] : tworzy n plików log"
-    echo "--help, -h : wyświetla tę pomoc"
+    echo "--date, -d : wyświetla datę"
+    echo "--logs [n], -l [n] : tworzy pliki log"
+    echo "--error [n], -e [n] : tworzy katalogi errorX z plikiem"
+    echo "--init : klonuje repo i ustawia PATH"
+    echo "--help, -h : pokazuje pomoc"
 fi
+
 
 if [[ "$1" == "--init" ]]; then
     git clone https://github.com/dsw43089/Lab4.git .
